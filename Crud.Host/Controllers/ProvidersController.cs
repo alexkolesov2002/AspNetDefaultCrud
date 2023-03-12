@@ -15,7 +15,7 @@ public class ProvidersController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<List<ProviderForViewDto>> GetAllProvidersAsync()
+    public async Task<List<ProviderForViewOutputDto>> GetAllProvidersAsync()
     {
         return await _providerAppService.GetAllProvidersAsync();
     }

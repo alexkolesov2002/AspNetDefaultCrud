@@ -17,9 +17,9 @@ public class ProviderAppService : IProviderAppService
         _mapper = mapper;
     }
 
-    public async Task<List<ProviderForViewDto>> GetAllProvidersAsync()
+    public async Task<List<ProviderForViewOutputDto>> GetAllProvidersAsync()
     {
-        return _mapper.Map<List<ProviderForViewDto>>(
+        return _mapper.Map<List<ProviderForViewOutputDto>>(
             await _providerRepository.GetAsync());
     }
 }

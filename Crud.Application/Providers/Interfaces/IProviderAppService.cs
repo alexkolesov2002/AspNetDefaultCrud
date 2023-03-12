@@ -4,5 +4,5 @@ namespace Crud.Application.Providers.Interfaces;
 
 public interface IProviderAppService
 {
-    Task<List<ProviderForViewDto>> GetAllProvidersAsync();
+    Task<List<ProviderForViewOutputDto>> GetAllProvidersAsync();
 }
