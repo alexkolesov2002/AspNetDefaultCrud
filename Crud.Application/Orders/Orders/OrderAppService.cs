@@ -1,10 +1,13 @@
 ﻿using AutoMapper;
+using Crud.Application.Help.Pagination.Dtos;
 using Crud.Application.Mapper;
+using Crud.Application.Orders.Orders.Dtos;
 using Crud.Application.Orders.Orders.Interfaces;
 using Crud.Application.Providers.Dtos;
 using Crud.Core.Orders;
 using Crud.Core.Providers;
 using Crud.EntityFramework.Repository;
+using Microsoft.EntityFrameworkCore;
 
 namespace Crud.Application.Orders.Orders;
 
@@ -19,8 +22,15 @@ public class OrderAppService : IOrderAppService
         _orderRepository = orderRepository1;
     }
 
-    public Task<List<ProviderForViewOutputDto>> GetAllProvidersAsync()
+    public async Task<PagedResultDto<OrderForViewOutputDto>> GetAllOrders(GetAllOrdersInput input)
     {
-        throw new NotImplementedException();
+        var ordersQuery = (await _orderRepository.GetAsync());
+
+        var totalCount = ordersQuery.Count();
+
+        return new PagedResultDto<OrderForViewOutputDto>(
+            totalCount,
+            _mapper.Map<IReadOnlyList<OrderForViewOutputDto>>(await ordersQuery.ToListAsync())
+        );
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Crud.Application.Help.Pagination.Dtos;
 
-[Serializable]
+
 public class PagedResultRequestDto : LimitedResultRequestDto, IPagedResultRequest
 {
     [Range(0, 2147483647)] 
