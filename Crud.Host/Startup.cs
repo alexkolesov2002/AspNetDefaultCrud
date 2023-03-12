@@ -27,6 +27,15 @@ public class Startup
         services.AddApplicationServices();
         services.AddDataServices(_configuration);
         services.AddHostServices();
+        services.AddCors(options =>
+        {
+            options.AddPolicy("AllowAll", policy =>
+            {
+                policy.AllowAnyHeader();
+                policy.AllowAnyMethod();
+                policy.AllowAnyOrigin();
+            });
+        });
         services.AddSwaggerGen(options =>
         {
             options.SwaggerDoc("v1", new OpenApiInfo { Title = "Crud", Version = "v1" });
@@ -42,9 +51,12 @@ public class Startup
             app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v1/swagger.json", "Online Shop v1"));
         }
 
+        app.UseCors("AllowAll");
+        app.UseHttpsRedirection();
         app.UseRouting();
         app.UseMiddleware<ExceptionHandlingMiddleware>();
         app.UseEndpoints(builder => { builder.MapControllers(); });
-        //app.SeedData();
+        app.SeedData();
+        app.SeedData();
     }
 }

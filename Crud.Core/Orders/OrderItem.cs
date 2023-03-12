@@ -16,7 +16,8 @@ public class OrderItem : Entity<int>
     [Required] 
     public virtual string Name  { get; set; }
     
+    [Required] 
     public virtual decimal Quantity  { get; set; }
-    
+    [Required] 
     public virtual string Unit  { get; set; }
 }
