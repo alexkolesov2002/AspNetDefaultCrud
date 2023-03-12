@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "G7HLxP4+zrpJUOqtw+lsOsynclOqXTZfBwKK/0boPGw=",
+  "Source": "Crud.Host",
+  "BasePath": "_content/Crud.Host",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

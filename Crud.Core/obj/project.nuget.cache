@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "tesFPWuORiWBDZ6Y1gMGmkLCvl8tgGmAp2p/brvR6xmu1z/ThO41PdC/oLU/thB1TjGgr+DVcHLbCeUuHA0Mxw==",
+  "success": true,
+  "projectFilePath": "H:\\Crud-master\\Crud.Core\\Crud.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\allad\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\allad\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

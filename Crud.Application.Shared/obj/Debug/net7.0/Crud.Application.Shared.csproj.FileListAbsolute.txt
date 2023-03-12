@@ -1,0 +1,12 @@
+H:\CRUD\Crud.Application.Shared\bin\Debug\net7.0\Crud.Application.Shared.deps.json
+H:\CRUD\Crud.Application.Shared\bin\Debug\net7.0\Crud.Application.Shared.dll
+H:\CRUD\Crud.Application.Shared\bin\Debug\net7.0\Crud.Application.Shared.pdb
+H:\CRUD\Crud.Application.Shared\obj\Debug\net7.0\Crud.Application.Shared.csproj.AssemblyReference.cache
+H:\CRUD\Crud.Application.Shared\obj\Debug\net7.0\Crud.Application.Shared.GeneratedMSBuildEditorConfig.editorconfig
+H:\CRUD\Crud.Application.Shared\obj\Debug\net7.0\Crud.Application.Shared.AssemblyInfoInputs.cache
+H:\CRUD\Crud.Application.Shared\obj\Debug\net7.0\Crud.Application.Shared.AssemblyInfo.cs
+H:\CRUD\Crud.Application.Shared\obj\Debug\net7.0\Crud.Application.Shared.csproj.CoreCompileInputs.cache
+H:\CRUD\Crud.Application.Shared\obj\Debug\net7.0\Crud.Application.Shared.dll
+H:\CRUD\Crud.Application.Shared\obj\Debug\net7.0\refint\Crud.Application.Shared.dll
+H:\CRUD\Crud.Application.Shared\obj\Debug\net7.0\Crud.Application.Shared.pdb
+H:\CRUD\Crud.Application.Shared\obj\Debug\net7.0\ref\Crud.Application.Shared.dll
