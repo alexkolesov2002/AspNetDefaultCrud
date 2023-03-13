@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Crud.EntityFramework.Repository;
 
-public class ProviderRepository : Repository<Provider>
+/*public class ProviderRepository : Repository<Provider>
 {
     private readonly ICrudDbContext _context;
     
@@ -12,4 +12,4 @@ public class ProviderRepository : Repository<Provider>
     {
         _context = context;
     }
-}
+}*/

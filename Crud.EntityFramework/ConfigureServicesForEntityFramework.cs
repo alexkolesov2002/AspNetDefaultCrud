@@ -19,8 +19,8 @@ public static class ConfigureServicesForEntityFramework
                 builder.UseLazyLoadingProxies()
                     .UseSqlServer(configuration.GetConnectionString("CrudDb")))
             .AddScoped<ICrudDbContext, CrudDbContext>()
-            .AddScoped<IRepository<Provider>, ProviderRepository>()
-            .AddScoped<IRepository<Order>, OrderRepository>()
-            .AddScoped<IRepository<OrderItem>, OrderItemRepository>();
+        .AddScoped(typeof(IRepository<>), typeof(Repository<>));
+       /* .AddScoped<IRepository<Order>, OrderRepository>()
+        .AddScoped<IRepository<OrderItem>, OrderItemRepository>();*/
     }
 }

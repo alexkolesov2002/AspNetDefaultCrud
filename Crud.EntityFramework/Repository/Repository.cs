@@ -5,15 +5,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Crud.EntityFramework.Repository;
 
-public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity<int>
+public  class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity<int>
 {
     private readonly ICrudDbContext _context;
     private readonly DbSet<TEntity> _set;
 
-    protected Repository(DbSet<TEntity> set, ICrudDbContext context)
+    public Repository(ICrudDbContext context)
     {
         _context = context;
-        _set = set;
+        _set = ((DbSet<TEntity>?)typeof(CrudDbContext)
+            .GetProperties()
+            .FirstOrDefault(x=>x.Name.Equals(typeof(TEntity).Name + "s"))
+            ?.GetValue(context))!;
     }
 
     public virtual async Task<TEntity> GetAsync(int id)
